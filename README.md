@@ -80,7 +80,7 @@ Ce projet a pour but de récupérer un terrain texturé à partir des données C
 
 Le fichier GML récupéré est composé de plusieurs parties utiles à la construction du terrain, encadrées dans des balises gml. Ces balises sont :
 
-- gml:boundedBy : Les informations contenues donnent des informations sur la taille et la position générale du terrain. Elles serviront à centrer et à changer l’échelle du terrain ([Partie "Center et changer d'échelle"](#Mettre-en-commun--Centrer-et-changer-l-échelle)).
+- gml:boundedBy : Les informations contenues donnent des informations sur la taille et la position générale du terrain. Elles serviront à centrer et à changer l’échelle du terrain ([Partie "Center et changer d'échelle"](#mettre-en-commun--centrer-et-changer-léchelle)).
 
 - core:cityObjectMember : Cette balise contient les coordonnées de chaque triangles qui composent le terrain. Le terrain est décomposé en plusieurs parcelles ([Partie "Construire les triangles"](#Construire-les-triangles)).
 
