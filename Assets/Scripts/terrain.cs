@@ -18,7 +18,6 @@ public class terrain : MonoBehaviour
 
     void Start()
     {
-        //Texture.
         importDonneesGML();
     }
 
@@ -72,7 +71,6 @@ public class terrain : MonoBehaviour
         
         foreach (var par in results.parcelle)
 		{
-            
             int increment = 0;
 
             //création obj
@@ -120,6 +118,7 @@ public class terrain : MonoBehaviour
                 }
             }
         
+
             // création du mesh
             Mesh msh = new Mesh();
             msh.vertices = vertices.ToArray();
