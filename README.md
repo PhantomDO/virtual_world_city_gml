@@ -115,7 +115,7 @@ Le terrain est en fait composé de plusieurs tuiles, dont chaque tuile se voit a
 Chaque tuile est identifiée par un identifiant qui correspond à une image jpg de la ville. Chaque triangle de la tuile possède également un identifiant.
 On dispose des coordonnées des uvs dans l’image (entre 0 et 1) : on peut alors décomposer l’image en plusieurs triangles, chaque triangle est associé à l’identifiant des triangles du mesh.
 
-Une texture à partir de l’image qui correspond à la tuile est alors crée, appliqué au mesh, les uvs du mesh sont donnés dans l’ordre des triangles du mesh (ordre donnés dans l’étape précédente - 2.construire les triangles).
+Une texture à partir de l’image qui correspond à la tuile est alors crée, appliqué au mesh, les uvs du mesh sont donnés dans l’ordre des triangles du mesh (ordre donnés dans l’étape précédente - [Construire les triangles](#Construire-les-triangles)).
 
 <p align="center">
     <img src="Images/img-terrain5.png"></img>
