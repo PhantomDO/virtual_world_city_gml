@@ -132,8 +132,8 @@ Puis, pour changer l’échelle, ces coordonnées sont divisées par un nombre (
 
 <p align="center">
     <img src="Images/img-terrain3.png"></img>
+    _Mise en commun du terrain avec le réseau routier_
 </p>
-*Mise en commun du terrain avec le réseau routier*
 
 La hauteur pourrait être accentué en multipliant la hauteur en Y, mais cela risquerait de décaler pour la mise en commun des différentes parties du projet global.
 
