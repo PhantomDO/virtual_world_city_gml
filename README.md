@@ -8,8 +8,8 @@
 # GeoRoads
 
 Par Delaunay Evann & Feuillastre Donnovan
-[Rapport google doc](https://docs.google.com/document/d/1FmAm7-7gqJv9aSPK4r23yALgCN8vLrTkClIRi87-S0E/edit?usp=sharing)
-[Présentation google doc](https://docs.google.com/presentation/d/10v7n7tFI3dTT6-j4kwbwoI0YFQ5D2lqAXltg3CUg26s/edit?usp=sharing)
+
+[Rapport](https://docs.google.com/document/d/1FmAm7-7gqJv9aSPK4r23yALgCN8vLrTkClIRi87-S0E/edit?usp=sharing), [Présentation](https://docs.google.com/presentation/d/10v7n7tFI3dTT6-j4kwbwoI0YFQ5D2lqAXltg3CUg26s/edit?usp=sharing)
 
 ## Récupération de données
 
