@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &514747874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a47cb829af94054d8379df607121182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  folderPathGMLTerrain: Assets/gml/BRON_2018/
+  folderPathGMLTerrain: Assets/gml/
   nomFichierGMLTerrain: BRON_TIN_2018.gml
   matOrigin: {fileID: 2100000, guid: 8bbf03e82aef7234eb85ed3413e78988, type: 2}
 --- !u!4 &514747875
