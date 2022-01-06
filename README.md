@@ -132,6 +132,7 @@ Puis, pour changer l’échelle, ces coordonnées sont divisées par un nombre (
 
 <p align="center">
     <img src="Images/img-terrain6.png"></img>
+    <br>
 *Mise en commun du terrain avec le réseau routier*
 </p>
 
