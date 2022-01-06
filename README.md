@@ -131,7 +131,7 @@ En hauteur en Y, le mesh n’est pas centré, et la plus petite valeur reste à 
 Puis, pour changer l’échelle, ces coordonnées sont divisées par un nombre (nous avons pris 1000 arbitrairement).
 
 <p align="center">
-    <img src="Images/img-terrain3.png"></img>
+    <img src="Images/img-terrain6.png"></img>
 *Mise en commun du terrain avec le réseau routier*
 </p>
 
