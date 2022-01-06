@@ -41,3 +41,5 @@ sysinfo.txt
 # Crashlytics generated file
 Assets/StreamingAssets/crashlytics-build.properties
 
+/Assets/gml/BRON_TIN_2018.gml
+/Assets/gml/BRON_TIN_2018.gml.meta
