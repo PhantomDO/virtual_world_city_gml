@@ -155,6 +155,22 @@ MonoBehaviour:
   folderPathGMLTerrain: Assets/gml/
   nomFichierGMLTerrain: BRON_TIN_2018.gml
   matOrigin: {fileID: 2100000, guid: 8bbf03e82aef7234eb85ed3413e78988, type: 2}
+  scaleFactor: 1000
+  OnTerrainLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1082981164}
+        m_TargetAssemblyTypeName: GeoJSONLoader, Assembly-CSharp
+        m_MethodName: LoadRoads
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &514747875
 Transform:
   m_ObjectHideFlags: 0
@@ -374,12 +390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6f69d210fc34aadbc7f96ec83913e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encodedGeoJSON: {fileID: 4900000, guid: b23d5f1cddc8bdc4cb1edb28f27c0296, type: 3}
+  encodedGeoJSON: {fileID: 4900000, guid: 43e88e476351bfa4bbb39e18aadac833, type: 3}
   roadPrefab: {fileID: 8920345304838750174, guid: e6085d8d821fac14a924c7d2b1d30a2a, type: 3}
   collection:
     type: FeatureCollection
     features: []
-  scaleFactor: 1000
 --- !u!4 &1082981165
 Transform:
   m_ObjectHideFlags: 0
@@ -387,10 +402,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082981163}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0.345, y: 0.2071, z: -1.1299}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

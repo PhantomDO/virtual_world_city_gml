@@ -11,7 +11,7 @@ using UnityEngine.XR;
 public class RoadDisplay : MonoBehaviour
 {
     [System.Serializable]
-    public struct RoadPoint
+    public class RoadPoint
     {
         public Vector2 position;
         public float height;
@@ -116,8 +116,8 @@ public class RoadDisplay : MonoBehaviour
                         
                         int index = vertices.Count - 2;
 
-                        triangles.AddRange(new int[] { index, index + 2, index + 1 });
-                        triangles.AddRange(new int[] { index + 2, index + 3, index + 1 });
+                        triangles.AddRange(new int[] { index, index + 1, index + 2 });
+                        triangles.AddRange(new int[] { index + 2, index + 1, index + 3 });
                     }
                     else
                     {
@@ -152,7 +152,7 @@ public class RoadDisplay : MonoBehaviour
                                 vertices.Add(pointSmoothStep + points[i].height * Vector3.forward);
                                 uv.Add(new Vector2(length, 0));
 
-                                triangles.AddRange(new int[] { cornerIndex, vertices.Count-1, vertices.Count-2 });
+                                triangles.AddRange(new int[] { cornerIndex, vertices.Count-2, vertices.Count-1 });
                             }
 
 
@@ -164,10 +164,10 @@ public class RoadDisplay : MonoBehaviour
 
                             int index = vertices.Count;
 
-                            triangles.AddRange(new int[] { cornerIndex, smoothEnd, smoothEnd - 1 });
+                            triangles.AddRange(new int[] { cornerIndex, smoothEnd-1, smoothEnd });
 
-                            triangles.AddRange(new int[] { cornerIndex, index, smoothEnd });
-                            triangles.AddRange(new int[] { index, index + 1, smoothEnd });
+                            triangles.AddRange(new int[] { cornerIndex, smoothEnd, index });
+                            triangles.AddRange(new int[] { index, smoothEnd, index + 1 });
                         }
                         else
                         {
@@ -194,9 +194,9 @@ public class RoadDisplay : MonoBehaviour
                                 uv.Add(new Vector2(length, 1));
 
                                 if(j==1)
-                                    triangles.AddRange(new int[] { cornerIndex, vertices.Count - 3, vertices.Count - 1 });
+                                    triangles.AddRange(new int[] { cornerIndex, vertices.Count - 1, vertices.Count - 3 });
                                 else
-                                    triangles.AddRange(new int[] { cornerIndex, vertices.Count - 2, vertices.Count - 1 });
+                                    triangles.AddRange(new int[] { cornerIndex, vertices.Count - 1, vertices.Count - 2 });
                             }
 
 
@@ -208,10 +208,10 @@ public class RoadDisplay : MonoBehaviour
 
                             int index = vertices.Count;
 
-                            triangles.AddRange(new int[] { smoothEnd-1, smoothEnd, cornerIndex });
+                            triangles.AddRange(new int[] { smoothEnd-1, cornerIndex, smoothEnd });
 
-                            triangles.AddRange(new int[] { smoothEnd, index + 1, cornerIndex });
-                            triangles.AddRange(new int[] { index, index + 1, smoothEnd });
+                            triangles.AddRange(new int[] { smoothEnd, cornerIndex, index + 1 });
+                            triangles.AddRange(new int[] { index, smoothEnd, index + 1 });
                         }
                     }
 
@@ -232,8 +232,8 @@ public class RoadDisplay : MonoBehaviour
                     {
                         int index = vertices.Count - 2;
 
-                        triangles.AddRange(new int[] { index, index + 2, index + 1 });
-                        triangles.AddRange(new int[] { index + 2, index + 3, index + 1 });
+                        triangles.AddRange(new int[] { index, index + 1, index + 2 });
+                        triangles.AddRange(new int[] { index + 2, index + 1, index + 3 });
                     }
                 }
 
