@@ -8,6 +8,20 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Globalization;
+using UnityEngine.Events;
+
+
+public struct TerrainArea
+{
+    public Vector3 center;
+    public Bounds bounds;
+    public float scale;
+}
+
+[System.Serializable]
+public class TerrainUnityEvent : UnityEvent<TerrainArea>
+{
+}
 
 public class terrain : MonoBehaviour
 {
@@ -15,6 +29,8 @@ public class terrain : MonoBehaviour
     public string nomFichierGMLTerrain;
     public Material matOrigin;
     public float scaleFactor;
+
+    public TerrainUnityEvent OnTerrainLoaded;
 
     void Start()
     {
@@ -65,6 +81,7 @@ public class terrain : MonoBehaviour
         }
         //Debug.Log("point moy : "+ptMoy);
 
+        Bounds globalBounds = new Bounds(Vector3.zero, Vector3.zero);
         
         List<GameObject> parcelles = new List<GameObject>();
         
@@ -125,6 +142,10 @@ public class terrain : MonoBehaviour
             msh.triangles = triangles.ToArray();
             msh.RecalculateNormals();
 
+            if (globalBounds.size == Vector3.zero)
+                globalBounds = msh.bounds;
+            else
+                globalBounds.Encapsulate(msh.bounds);
 
             parcelleObj.GetComponent<MeshFilter>().mesh = msh;
             parcelleObj.GetComponent<MeshRenderer>().material = mat;
@@ -132,7 +153,8 @@ public class terrain : MonoBehaviour
             parcelleObj.transform.SetParent(this.transform);
             parcelles.Add(parcelleObj);
             
-        }      
-        
+        }
+
+        OnTerrainLoaded.Invoke(new TerrainArea{bounds = globalBounds,center = ptMoy, scale = scaleFactor});
     }    
 }
