@@ -41,12 +41,12 @@ public class CustomTree : MonoBehaviour
 
     public void ReadValues(TreeProperties tp, float treeScale)
     {
-        _circonference_cm = tp.circonference_cm;
-        _hauteurTotale_m = tp.hauteurtotale_m;
-        _hauteurFut_m = tp.hauteurfut_m;
-        _diametreCouronne_m = tp.diametrecouronne_m;
-        _rayonCouronne_m = tp.rayoncouronne_m;
-        _essenceFrancais = tp.essencefrancais;
+        _circonference_cm = tp.circonfere;
+        _hauteurTotale_m = tp.hauteurtot;
+        _hauteurFut_m = tp.hauteurfut;
+        _diametreCouronne_m = tp.diametreco;
+        _rayonCouronne_m = tp.rayoncouro;
+        _essenceFrancais = tp.essencefra;
 
         _treeScale = treeScale;
 

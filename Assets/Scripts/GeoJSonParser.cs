@@ -23,27 +23,27 @@ public struct TreeStruct
 [System.Serializable]
 public struct TreeProperties
 {
-    public string essencefrancais;
-    public int circonference_cm;
-    public int hauteurtotale_m;
-    public int hauteurfut_m;
-    public int diametrecouronne_m;
-    public int rayoncouronne_m;
-    public string dateplantation;
+    public string essencefra;
+    public int circonfere;
+    public int hauteurtot;
+    public int hauteurfut;
+    public int diametreco;
+    public int rayoncouro;
+    public string dateplanta;
     public string genre;
     public string espece;
     public string variete;
     public string essence;
-    public string architecture;
-    public string localisation;
-    public string naturerevetement;
-    public string mobilieurbain;
-    public int anneeplantation;
+    public string architectu;
+    public string localisati;
+    public string naturereve;
+    public string mobilierur;
+    public int anneeplant;
     public string commune;
     public string codeinsee;
     public string nomvoie;
     public int codefuv;
-    public int identifiant;
+    public int identifian;
     public int numero;
     public int codegenre;
     public int gid;

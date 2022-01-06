@@ -24,8 +24,8 @@ public class PlaceTrees : MonoBehaviour
         foreach (TreeStruct ts in parser.trees)
         {
             GameObject tree = Instantiate(treePrefab, transform);
-            tree.name = "[" + ts.properties.identifiant + "] " + ts.properties.essencefrancais;
-            Vector3 treePos = ConvertGPStoUCS(new Vector2((float)ts.geometry.coordinates[0], (float)ts.geometry.coordinates[1]))/spaceBetweenTrees;
+            tree.name = "[" + ts.properties.identifian + "] " + ts.properties.essencefra;
+            Vector3 treePos = (new Vector3((float)ts.geometry.coordinates[0], 0.0f, (float)ts.geometry.coordinates[1]) - new Vector3(1848779.0f, 0f, 5172360f))/spaceBetweenTrees;//ConvertGPStoUCS(new Vector2((float)ts.geometry.coordinates[0], (float)ts.geometry.coordinates[1]))/spaceBetweenTrees;
             //Vector3 treePos = new Vector3((float)ts.geometry.coordinates[0], 0, (float)ts.geometry.coordinates[1]) * spaceBetweenTrees;
             tree.transform.position = treePos;
 
@@ -33,13 +33,13 @@ public class PlaceTrees : MonoBehaviour
 
             _trees.Add(tree);
 
-            mean += treePos;
+            //mean += treePos;
         }
 
-        mean /= parser.trees.Count;
+        //mean /= parser.trees.Count;
 
-        foreach (GameObject tree in _trees)
-            tree.transform.position = tree.transform.position - mean;
+        /*foreach (GameObject tree in _trees)
+            tree.transform.position = tree.transform.position/spaceBetweenTrees;*/
 
     }
 
