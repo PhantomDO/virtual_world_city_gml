@@ -94,7 +94,7 @@ Pour parser ces données afin qu’elles soient utilisables dans le code, nous n
 
 Nous avons commencé par modéliser la topographie du terrain en un seul mesh à l’aide des coordonnées fournies dans le fichier GML.
 
-Pour cela, chaque coordonnées des triangles contenues dans les balises “gml:posList” est extraite du gml. Ces coordonnées sont sous la forme “ x1 z1 y1 x2 z2 y2 x3 z3 y3 x1 z1 y1”, les coordonnées du dernier point devant être les mêmes que ceux du dernier.
+Pour cela, chaque coordonnées des triangles contenues dans les balises “gml:posList” est extraite du gml. Ces coordonnées sont sous la forme “ x1 z1 y1 x2 z2 y2 x3 z3 y3 x1 z1 y1”, les coordonnées du dernier point devant être les mêmes que ceux du premier.
 
 Une fois la chaîne de caractère de la balise découpée, parsée en float, puis réduite (voir 4.), ces valeurs sont utilisées pour créer les triangles du mesh, en veillant bien à l’ordre des coordonnées (dans le gml, chaque point est noté X, Z, Y), et à l’ordre des points (lors de la construction des triangles, si on ajoute le numéros des points au fur et à mesure, les normales ne sont pas dans le bon sens et le mesh est inversé. Il faut ajouter la position du premier point, puis le troisième et enfin le deuxième.)
 
