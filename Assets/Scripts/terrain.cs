@@ -14,7 +14,7 @@ public class terrain : MonoBehaviour
     public string folderPathGMLTerrain;
     public string nomFichierGMLTerrain;
     public Material matOrigin;
-    
+    public float scaleFactor;
 
     void Start()
     {
@@ -23,7 +23,6 @@ public class terrain : MonoBehaviour
 
     void importDonneesGML()
     {
-        float coefSize = 1000; //échelle
 
         XDocument doc = XDocument.Load($"{folderPathGMLTerrain}{nomFichierGMLTerrain}");
         XElement indoorFeatures = doc.Root;
@@ -86,9 +85,9 @@ public class terrain : MonoBehaviour
             foreach (var pos in par.position)
 			{
                 string[] subs = pos.coord.Split(' ');
-                vertices.Add((new Vector3(float.Parse(subs[0], CultureInfo.InvariantCulture), float.Parse(subs[2], CultureInfo.InvariantCulture), float.Parse(subs[1], CultureInfo.InvariantCulture)) - ptMoy) / coefSize);
-                vertices.Add((new Vector3(float.Parse(subs[3], CultureInfo.InvariantCulture), float.Parse(subs[5], CultureInfo.InvariantCulture), float.Parse(subs[4], CultureInfo.InvariantCulture)) - ptMoy) / coefSize);
-                vertices.Add((new Vector3(float.Parse(subs[6], CultureInfo.InvariantCulture), float.Parse(subs[8], CultureInfo.InvariantCulture), float.Parse(subs[7], CultureInfo.InvariantCulture)) - ptMoy) / coefSize);
+                vertices.Add((new Vector3(float.Parse(subs[0], CultureInfo.InvariantCulture), float.Parse(subs[2], CultureInfo.InvariantCulture), float.Parse(subs[1], CultureInfo.InvariantCulture)) - ptMoy) / scaleFactor);
+                vertices.Add((new Vector3(float.Parse(subs[3], CultureInfo.InvariantCulture), float.Parse(subs[5], CultureInfo.InvariantCulture), float.Parse(subs[4], CultureInfo.InvariantCulture)) - ptMoy) / scaleFactor);
+                vertices.Add((new Vector3(float.Parse(subs[6], CultureInfo.InvariantCulture), float.Parse(subs[8], CultureInfo.InvariantCulture), float.Parse(subs[7], CultureInfo.InvariantCulture)) - ptMoy) / scaleFactor);
                 triangles.Add(increment);
                 triangles.Add(increment + 2);
                 triangles.Add(increment + 1);
